@@ -25,7 +25,7 @@
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
-
+    <script src="lib/ngCordova/ng-cordova.min.js"></script>
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
@@ -38,7 +38,16 @@
       <ion-header-bar class="bar-stable">
         <h1 class="title">Ionic App Starter</h1>
       </ion-header-bar>
-      <ion-content>
+      <ion-content ng-controller="SampleCtrl">
+        <button ng-click="testAppAvailabity()" class="button">check app </button>
+        <button ng-click="getGeoLocation()" class="button">check geo position </button>
+         <button ng-click="scheduleDelayedNotification()" class="button">check localnot</button>
+         <button ng-click="showToast()" class="button">show toast </button>
+        <button ng-click="launchNavigator()" class="button">launch navigator </button>
+       
+
+        <span>lat:{{lat}}</span>
+        <span>long:{{long}}</span>
       </ion-content>
     </ion-pane>
   </body>
